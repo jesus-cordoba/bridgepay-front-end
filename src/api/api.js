@@ -40,7 +40,6 @@ export async function fetchRecentBatches() {
     return response.json();
 }
 
-// NOTE: This function was added to support the frontend pulling ALL batches (for dynamic metrics and time filtering).
 export async function fetchAllBatches() {
     const response = await fetch(`${BASE_URL}/batches/all`);
     if (!response.ok) {
@@ -49,7 +48,6 @@ export async function fetchAllBatches() {
     return response.json();
 }
 
-// HUMAN NOTE: This function supports filtered batch queries based on time range or start/end.
 export async function fetchBatchesFiltered({ start, end, timeRange }) {
     let url = `${BASE_URL}/batches/filter`;
 
@@ -72,7 +70,6 @@ export async function fetchBatchesFiltered({ start, end, timeRange }) {
     return response.json();
 }
 
-// HUMAN NOTE: This function fetches summary business metrics (total volume, success rate, etc.)
 export async function fetchSummaryMetrics() {
     const response = await fetch(`${BASE_URL}/summary`);
     if (!response.ok) {
