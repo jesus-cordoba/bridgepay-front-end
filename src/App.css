@@ -1,0 +1,223 @@
+/* Table styles for Recent Transactions */
+.recent-transactions-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+}
+
+.recent-transactions-table th,
+.recent-transactions-table td {
+  text-align: left;
+  padding: 0.5rem 1rem;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.recent-transactions-table th {
+  font-weight: 600;
+  color: #333;
+}
+
+.recent-transactions-table td {
+  color: #555;
+}
+
+.recent-transactions-table tr:last-child td {
+  border-bottom: none;
+}
+.app {
+  min-height: 100vh;
+  background-color: var(--background);
+}
+
+.navbar {
+  background-color: var(--surface);
+  border-bottom: 1px solid var(--border);
+  padding: var(--spacing-md) 0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.navbar-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--primary);
+}
+
+.nav-links {
+  display: flex;
+  gap: var(--spacing-md);
+}
+
+.main-content {
+  padding: var(--spacing-2xl) 0;
+}
+
+.dashboard-header {
+  margin-bottom: var(--spacing-2xl);
+}
+
+.text-secondary {
+  color: var(--text-secondary);
+  margin-top: var(--spacing-xs);
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: var(--spacing-lg);
+  margin-bottom: var(--spacing-2xl);
+}
+
+.stat-card {
+  background-color: var(--surface);
+  padding: var(--spacing-lg);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+}
+
+.stat-value {
+  font-size: 2rem;
+  font-weight: 600;
+  margin: var(--spacing-sm) 0;
+}
+
+.stat-change {
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.stat-change.positive { color: var(--success); }
+.stat-change.negative { color: var(--danger); }
+.stat-change.neutral { color: var(--text-secondary); }
+
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: var(--spacing-lg);
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--spacing-lg);
+}
+
+.time-filter {
+  display: flex;
+  gap: var(--spacing-xs);
+}
+
+.btn-secondary.active {
+  background-color: var(--primary);
+  color: white;
+  border-color: var(--primary);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .dashboard-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .stats-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .nav-links {
+    gap: var(--spacing-sm);
+  }
+  
+  .btn {
+    padding: 0.5rem 0.75rem;
+    font-size: 0.875rem;
+  }
+}
+/* Banner styles for file-selected notification */
+.banner {
+  margin: 1rem auto;
+  padding: 1rem;
+  background-color: #e0f7fa;
+  border: 1px solid #4dd0e1;
+  border-radius: 6px;
+  width: 80%;
+  text-align: center;
+}
+
+.banner p {
+  margin: 0 0 0.5rem 0;
+  font-weight: bold;
+}
+
+.banner .btn-success {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.banner .btn-success:hover {
+  background-color: #45a049;
+}
+
+/* Confirmation dialog styles for the final settle step */
+.confirmation-dialog {
+  margin-top: 1rem;
+  padding: 1rem;
+  background-color: #fff3cd;
+  border: 1px solid #ffeeba;
+  border-radius: 6px;
+  width: 60%;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.confirmation-dialog p {
+  margin-bottom: 0.75rem;
+  font-weight: bold;
+}
+
+.confirmation-dialog .btn-danger {
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-right: 0.5rem;
+}
+
+.confirmation-dialog .btn-danger:hover {
+  background-color: #c82333;
+}
+
+.confirmation-dialog .btn-secondary {
+  background-color: #6c757d;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.confirmation-dialog .btn-secondary:hover {
+  background-color: #5a6268;
+}
